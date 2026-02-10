@@ -1,0 +1,110 @@
+:root {
+  /* Color Palette */
+  --color-primary: #BA3F31; /* Rojo teja */
+  --color-cream: #F5E7D6;   /* Background */
+  --color-text: #352C23;    /* Dark Text */
+  --color-accent-teal: #234D57;
+  --color-accent-green: #678929;
+  --color-accent-orange: #EF5F05;
+  --color-accent-yellow: #FDAF02;
+
+  /* Typography */
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 2rem;     /* 32px */
+  --spacing-xl: 4rem;     /* 64px */
+  
+  /* Border Radius */
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  
+  /* Subtle paper texture simulation using CSS gradients */
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-blend-mode: overlay;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(53, 44, 35, 0.15);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(186, 63, 49, 0.05);
+}
+
+/* Organic Shape Utilities */
+.shape-organic {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
