@@ -26,7 +26,7 @@ const Header = () => {
 
                 {/* Desktop Nav */}
                 <nav className="desktop-nav" style={{ display: 'none', gap: 'var(--spacing-lg)', alignItems: 'center' }}>
-                    {['Qué es', 'Cómo funciona', 'Impacto', 'Súmate'].map((item) => (
+                    {['¿Qué es?', '¿Cómo funciona?', 'Impacto', 'Súmate'].map((item) => (
                         <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} style={{
                             fontFamily: 'var(--font-body)',
                             fontWeight: 500,
@@ -64,7 +64,7 @@ const Header = () => {
                     alignItems: 'center',
                     gap: 'var(--spacing-md)'
                 }}>
-                    {['Qué es', 'Cómo funciona', 'Impacto', 'Súmate'].map((item) => (
+                    {['¿Qué es?', '¿Cómo funciona?', 'Impacto', 'Súmate'].map((item) => (
                         <a key={item} href="#" onClick={() => setIsOpen(false)} style={{ fontSize: '1.2rem', fontWeight: 600 }}>
                             {item}
                         </a>
