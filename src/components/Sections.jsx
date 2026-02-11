@@ -1,4 +1,5 @@
 import React from 'react';
+import ResourcesSection from './ResourcesSection';
 
 const Section = ({ id, title, bgColor, children, className }) => (
     <section id={id} className={className} style={{
@@ -218,6 +219,9 @@ const Sections = () => {
                     </p>
                 </div>
             </Section>
+
+            {/* NUEVA SECCIÓN: RECURSOS */}
+            <ResourcesSection />
 
             {/* 6. CALL TO ACTION (SÚMATE) */}
             <Section id="súmate" title="Súmate a LATIRE">
