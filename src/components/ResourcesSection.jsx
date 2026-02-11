@@ -151,20 +151,68 @@ const ResourcesSection = () => {
                 }}>
                     {/* Bloque 1: Economía creativa */}
                     <ResourceBlock
-                        title="Economía creativa"
-                        concept="Creamos valor cultural desde el territorio"
-                        items={["Podcast barrial", "Obras artísticas", "Archivo vivo", "Contenidos creativos"]}
-                        footer="Estos productos se contratan, se presentan y se financian."
-                        color="var(--color-accent-teal)"
-                        rotation="-1deg"
-                        icon={
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-2.26C5.19 13.47 4 11.38 4 9a7 7 0 0 1 8-7z"></path>
-                                <path d="M9 21h6"></path>
-                                <path d="M10 21a2 2 0 0 1 4 0"></path>
-                            </svg>
-                        }
-                    />
+    title="Economía creativa"
+    concept="Creamos valor cultural desde el territorio"
+    items={["Podcast barrial", "Obras artísticas", "Archivo vivo", "Contenidos creativos"]}
+    footer={
+        <button 
+            className="btn-secundary"
+            style={{
+                background: 'var(--color-accent-teal)',
+                color: 'white',
+                border: 'none',
+                padding: '12px 24px',
+                borderRadius: '30px',
+                fontSize: '16px',
+                fontWeight: '600',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                justifyContent: 'center'
+            }}
+            onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            }}
+            onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+            }}
+            onClick={() => {
+                console.log('Abrir marketplace');
+            }}
+        >
+            <svg 
+                width="20" 
+                height="20" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+            >
+                <path d="M6 7h12l-1 14H7L6 7z"></path>
+                <path d="M9 7V6a3 3 0 0 1 6 0v1"></path>
+                <path d="M9 11v0"></path>
+                <path d="M15 11v0"></path>
+            </svg>
+            Marketplace
+        </button>
+    }
+    color="var(--color-accent-teal)"
+    rotation="-1deg"
+    icon={
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-2.26C5.19 13.47 4 11.38 4 9a7 7 0 0 1 8-7z"></path>
+            <path d="M9 21h6"></path>
+            <path d="M10 21a2 2 0 0 1 4 0"></path>
+        </svg>
+    }
+/>
 
                     {/* Bloque 2: Servicios LATIRE */}
                     <ResourceBlock
