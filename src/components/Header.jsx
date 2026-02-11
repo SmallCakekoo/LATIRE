@@ -15,13 +15,18 @@ const Header = () => {
             <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 {/* Logo */}
                 <div style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '2rem',
-                    lineHeight: 1,
-                    color: 'var(--color-primary)',
-                    fontWeight: 700
+                    display: 'flex',
+                    alignItems: 'center'
                 }}>
-                    LATIRE
+                    <img
+                        src="/ROJO LATIRE 3.png"
+                        alt="LATIRE Logo"
+                        style={{
+                            height: '50px',
+                            width: 'auto',
+                            objectFit: 'contain'
+                        }}
+                    />
                 </div>
 
                 {/* Desktop Nav */}
